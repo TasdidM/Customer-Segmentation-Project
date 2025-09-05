@@ -1,4 +1,4 @@
-# Customer-Segmentation-Project
+# Customer Segmentation Project
 
 ## Introduction
 This project is about customer segmentation using unsupervised learning on online-retail dataset. In businesses, it is hard to understand their customers. This project applies unsupervised clustering techniques to identify distinct customer groups using purchasing data and attempts to understand their behaviour towards the online retail shop for future targeted marketing. This project also aims to determine which group generates what percentage of revenue, the total revenue each group generates, and the top 5 products that each group of customers buys the most.
