@@ -7,6 +7,17 @@ This project is about customer segmentation using unsupervised learning on onlin
 The dataset that has been used is a transactional data which contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based and registered non-store online retail. The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers. The dataset has total number of 541,909 rows of transactions. Link to access the dataset is as follows:
 https://archive.ics.uci.edu/dataset/352/online+retail.
 
+## Results
+K-means clsutering model with 4 cluster has been used that gives Silhouette score around 0.32. The following groups of registered customers are labeled by interpreting the centroids of each cluster:
+  1. At-risk
+  2. One-timers 
+  3. Regulars
+  4. VIP loyal customers
+
+In the dataset of the online retail shop, possible churn (At-risk) of registered customers are about 30% of their total registered customers in the data and they are generating 21.68% of the revenue. Their loyal customers are the highest revenue generating customers, which is 67.84% of the total revenue from registered customer in the dataset. It will be a good investment in marketing toward these two groups. This business can retain around 90% of total revenue from registered customers by focusing only around 50% of their registered customers who bought from the online retail shop between the dataframe time period. The other two groups, regular and one-time buyers, contribute in-total around 10% of the total revenue from registered customers. 
+Furthermore, I also try to find out the top 5 bought products by each group of customers. Which could be useful for marketing ideas.
+
+
 ## Methodology
 ### Feature Engineering
 The clustering is done by using feature engineered features for each individual registered customers, therefore, it will be difficult to find out the correct recency of unregistered customers. The engineered features are called RFM (Recency, Frequency and Monetary). Recency is the days that have been passed between last day of purchase of a customer and a reference day. In this analysis the reference day is the next day of the last transaction of the dataset. Frequency is the number of transactions of each customer. Monetary is the total spending (generated revenue) of each customer between the time period of dataset. Furthermore, these data were highly skewed, therefore log-transformation have been used for clustering purpose.
@@ -49,15 +60,6 @@ here,
   $\vec{x}$ = a vector of data point,
   $\vec{\mu_h}$ = the centroid of $h$-th cluster.
 
-## Results
-After doing some model selections, K-means model with 4 cluster has been used that gives Silhouette score around 0.32. The following groups of registered customers are labeled by interpreting the centroids of each cluster:
-  1. At-risk
-  2. One-timers 
-  3. Regulars
-  4. VIP loyal customers
-
-In the dataset of the online retail shop, possible churn (At-risk) of registered customers are about 30% of their total registered customers in the data and they are generating 21.68% of the revenue. Their loyal customers are the highest revenue generating customers, which is 67.84% of the total revenue from registered customer in the dataset. It will be a good investment in marketing toward these two groups. This business can retain around 90% of total revenue from registered customers by focusing only around 50% of their registered customers who bought from the online retail shop between the dataframe time period. The other two groups, regular and one-time buyers, contribute in-total around 10% of the total revenue from registered customers. 
-Furthermore, I also try to find out the top 5 bought products by each group of customers. Which could be useful for marketing ideas.
 
 ## Libraries
 Pandas, Matplotlib, Seaborn, Numpy, Scikit-learn, Scipy.
