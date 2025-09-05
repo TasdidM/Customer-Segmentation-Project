@@ -13,5 +13,6 @@ The clustering is done by using feature engineered features for each individual 
 To determine the group of clusters, distance-based clustering algorithms (such as Agglomerative Hierarchical and K-means) are implemented. Agglomerative hierarchical clustering applies the Ward method for distance between two clusters and the Euclidean distance for dissimilarity measures between two observations. The following defines these metrics:
 
 **Euclidean Distance**\
-Let's consider the $n \times p$ data matrix, where $n$ is the number of observed units and $p$ is the number of features; let's indicate with $i$ and $j$ two observations and with $x_{ih}$ the value of the $h$-th feature for the $i$-th object.
+Let's consider the $n \times p$ data matrix, where $n$ is the number of observed units and $p$ is the number of features; let's indicate with $i$ and $j$ two observations and with $x_{ih}$ the value of the $h$-th feature for the $i$-th object. If the observed variables are all quantative, each unit can be identified with a point in the $p$-dimensional space and the dissimilarity measure, Euclidean distance, between two objects $i$ and $j$ can be measured through:
+\$$ d_{ij} = \sqrt{\sum_{h=1}^{p}(x_{ih}-x{ij})^2}
 
