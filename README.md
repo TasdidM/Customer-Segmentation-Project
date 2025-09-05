@@ -8,6 +8,9 @@ The dataset that has been used is a transactional data which contains all the tr
 https://archive.ics.uci.edu/dataset/352/online+retail.
 
 ## Methodology
-The clustering is done by using feature engineered features for each individual registered customers, it will be tough to find out the correct recency of guest customers. The engineered features are called RFM (Recency, Frequency and Monetary). Recency is the days that have been passed between last day of purchase of a customer and reference day. In this analysis the reference day is the next day of the last transaction in the dataset. Frequency is the number of transactions of each customer. Monetary is the total spending (generated revenue) of each customer between the time period of dataset. Furthermore, these data were highly skwed, therefore log-transformation have been used for clustering purpose.
+The clustering is done by using feature engineered features for each individual registered customers, therefore, it will be difficult to find out the correct recency of unregistered customers. The engineered features are called RFM (Recency, Frequency and Monetary). Recency is the days that have been passed between last day of purchase of a customer and a reference day. In this analysis the reference day is the next day of the last transaction of the dataset. Frequency is the number of transactions of each customer. Monetary is the total spending (generated revenue) of each customer between the time period of dataset. Furthermore, these data were highly skewed, therefore log-transformation have been used for clustering purpose.
 
-C
+To determine the group of clusters, distance-based clustering algorithms (such as Agglomerative Hierarchical and K-means) are implemented. Agglomerative hierarchical clustering applies the Ward method for distance between two clusters and the Euclidean distance for dissimilarity measures between two observations. The following defines these metrics:
+** Euclidean Distance **
+Let's consider the $n x p$ data matrix, where $n$ is the number of observed units and $p$ is the number of features; let's indicate with $i$ and $j$ two observations and with $x_(ih)$ the value of the $h$-th feature for the $i$-th object.
+
